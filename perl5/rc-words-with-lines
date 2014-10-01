@@ -1,0 +1,16 @@
+#!/usr/bin/env perl
+use 5.018;
+use warnings;
+use autodie;
+
+my %dict;
+open my $fh, '<:utf8', "../data/wordpairs.txt";
+while (<$fh>) {
+    chomp;
+    my ( $a, $b ) = split( /\s+/, $_, 2 );
+    push @{ $dict{$a} }, $b;
+}
+my $count = scalar( @{ $dict{"her"} } );
+say "!!!!!! Something Wrong !!!!!!" if $count != 1031;
+
+#vim :filetype=perl

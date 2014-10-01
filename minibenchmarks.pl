@@ -97,4 +97,12 @@
   perl6 => [qw( BENCH/perl6/rc-forest-fire-stringify 16 16 SCALE )],
   nqp   => [qw( BENCH/nqp/rc-forest-fire-stringify   16 16 SCALE )],
  },
+ {
+  name  => 'rc-words-with-lines',
+  skip  => [qw( )],
+  tags  => [qw( IO words lines words-with-lines )],
+  perl5 => [qw( BENCH/perl5/rc-words-with-lines )],
+  perl6 => [qw( BENCH/perl6/rc-words-with-lines )],
+ },
+ 
 ]

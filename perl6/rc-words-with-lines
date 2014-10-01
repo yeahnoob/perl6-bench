@@ -1,0 +1,13 @@
+use v6;
+
+my %dict;
+my $a;
+my $b;
+for "../data/wordpairs.txt".IO.words(:eager) -> $a,$b {
+    push %dict{$a}, $b;
+}
+
+## check
+say "!!!!!! Something Wrong !!!!!!" if %dict{"her"}.elems != 1031;
+
+# vim: ft=perl6
